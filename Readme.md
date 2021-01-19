@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Надежда](https://up.htmlacademy.ru/htmlcss/30/user/1712359).
-* Наставник: `Неизвестно`.
+* Наставник: [Иван Жарков] (https://htmlacademy.ru/profile/stalyer).
 
 ---
 
