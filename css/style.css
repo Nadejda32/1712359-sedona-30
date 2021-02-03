@@ -346,9 +346,10 @@ img {
 
 /* condition-button */
 
+
+
+
 /* Как сделать активное состояние?
-.sorting-list .active,
-.sorting-list .active,
 .sorting-list .active{
   color: var(--basic-blue);
   border: none;
@@ -407,6 +408,11 @@ img {
 .button-book:active{
   background-color: var(--basic-active-brown);
   color: var(--color-active-white);
+}
+
+.sorting-list .active_sorting{
+  color: var(--basic-blue);
+  border: none;
 }
 
 /* footer */
@@ -487,7 +493,5 @@ img {
 .link-htmlacademy path:active{
   fill: var(--basic-active-logo-htmlacademy);
 }
-
-
 
 
