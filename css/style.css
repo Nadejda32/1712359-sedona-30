@@ -1,16 +1,16 @@
 /* fonts */
 @font-face{
   font-family: "PT Sans";
-  src: url(../fonts/PTSans.woff) format("woff"),
-  url(../fonts/PTSans.woff2) format("woff2");
+  src: url(../fonts/PTSans.woff2) format("woff2"),
+  url(../fonts/PTSans.woff) format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face{
   font-family: "PT Sans";
-  src: url(../fonts/PTSans-Bold.woff) format("woff"),
-  url(../fonts/PTSans-Bold.woff2) format("woff2");
+  src:url(../fonts/PTSans-Bold.woff2) format("woff2"),
+  url(../fonts/PTSans-Bold.woff) format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -83,12 +83,12 @@ img {
   font-weight: 700;
 }
 
-.site-navigation :hover,
-.site-navigation :focus{
+.site-navigation a:hover,
+.site-navigation a:focus{
   color: var(--basic-blue);
 }
 
-.site-navigation :active{
+.site-navigation a:active{
   color: var(--basic-black);
   opacity: 0.3;
 }
@@ -134,14 +134,22 @@ img {
   list-style: none;
 }
 
-.features-item-one,
-.features-item-two{
-  color: var(--basic-white);
+.features-item{
+  color: var(--basic-black);
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  background-color: var(--basic-blue);
+  background-color: var(--basic-white);
   text-align: center;
+}
+
+.features-item-back-blue{
+  color: var(--basic-white);
+  background-color: var(--basic-blue);
+}
+
+.features-item-back-grey{
+  background-color: var(--basic-neutral);
 }
 
 .features-item-one h3,
