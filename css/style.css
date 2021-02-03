@@ -413,6 +413,7 @@ img {
 .sorting-list .active_sorting{
   color: var(--basic-blue);
   border: none;
+  opacity: 1;
 }
 
 /* footer */
