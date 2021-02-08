@@ -55,6 +55,11 @@ body{
   color: var(--basic-black);
   text-transform: uppercase;
   background-color: var(--basic-white);
+
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 a {
@@ -66,15 +71,55 @@ img {
   height: auto;
 }
 
+/* Grid */
+.page{
+  height: 100%;
+}
+
+/* main-header */
+.main-header{
+  margin-bottom: 76px;
+}
+
+
 /* Main navigation */
 .main-navigation{
+  display: grid;
   font-size: 14px;
   line-height: 26px;
   color: var(--basic-black);
   background-color: transparent;
 }
 
+/* container */
+.container{
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* logo */
+.main-header-logo{
+  order: 1;
+  justify-self: center;
+}
+
+.main-navigation-wrapper{
+
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 72px;
+}
+
+.main-header-bar{
+  background-color: var(--basic-white);
+}
+
 .site-navigation{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -108,8 +153,7 @@ img {
 }
 
 .welcome-sign-img{
-  margin-top: 77px;
-  margin-bottom: 80px;
+  margin: 77px 372px 80px 372px;
 }
 
 /* features */
@@ -131,6 +175,10 @@ img {
 
 /* features-list */
 .features-list{
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
   list-style: none;
 }
 
@@ -143,17 +191,26 @@ img {
   text-align: center;
 }
 
+.features-item-long{
+
+  display: flex;
+  flex-wrap: wrap;
+  grid-column-start: 1;
+  grid-column-end: -1;
+
+  width: 100%;
+}
+
 .features-item-back-blue{
   color: var(--basic-white);
   background-color: var(--basic-blue);
 }
 
 .features-item-back-grey{
+  height: 256px;
   background-color: var(--basic-neutral);
 }
 
-.features-item-one h3,
-.features-item-two h3,
 .features-item h3{
   font-size: 21px;
   font-weight: 700;
@@ -161,11 +218,23 @@ img {
 }
 
 .subsection-features-list{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 330px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-content: center;
   list-style: none;
   background-color: var(--basic-white);
 }
 
+.features-item-wrapper-text{
+  width: 400px;
+}
+
 .subsection-features-item{
+  height: 330px;
   color: var(--basic-black);
   font-size: 14px;
   font-weight: 400;
@@ -174,6 +243,7 @@ img {
 }
 
 .subsection-features-item h3{
+  margin-bottom: 25px;
   font-size: 21px;
   font-weight: 700;
 }
@@ -248,6 +318,24 @@ img {
   color: var(--basic-white);
   background-color: transparent;
   border: 2px solid var(--basic-white);
+}
+
+.specific-form{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+/* так не надо */
+.specific-infra-list,
+.name-specific-infra-list{
+  padding: 0;
+  margin-left: 72px;
+}
+
+
+
+.specific-infra-list,
+.specific-type-list{
+  list-style: none;
 }
 
 .button-specific{
@@ -344,17 +432,6 @@ img {
   text-align: center;
 }
 
-/* condition-button */
-
-
-
-
-/* Как сделать активное состояние?
-.sorting-list .active{
-  color: var(--basic-blue);
-  border: none;
-} */
-
 /* состояние инпутов из формы тут будут  и кнопка поиск*/
 
 .button-search:hover,
@@ -422,9 +499,20 @@ img {
   background-color: var(--basic-white);
   color: var(--basic-black);
   opacity: 0.9;
+
+  outline: 5px solid rgba(255, 0, 0, 0);
+  outline-offset: -5px;
+}
+
+.main-footer .container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .footer-contacts{
+  margin: 0;
+  width: 251px;
+  justify-self: center;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -435,6 +523,8 @@ img {
 }
 
 .footer-social{
+  width: 150px;
+  justify-self: center;
   list-style: none;
 }
 
@@ -463,6 +553,8 @@ img {
 }
 
 .footer-copyright{
+  max-width: 197px;
+  margin: 0;
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
