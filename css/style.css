@@ -78,13 +78,12 @@ img {
 
 /* main-header */
 .main-header{
-  margin-bottom: 76px;
+
 }
 
 
 /* Main navigation */
 .main-navigation{
-
   display: grid;
   font-size: 14px;
   line-height: 26px;
@@ -106,10 +105,7 @@ img {
 }
 
 .main-navigation-wrapper{
-
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 72px;
+  width: 100%;
 }
 
 .main-header-bar{
@@ -118,10 +114,14 @@ img {
 
 .site-navigation{
   display: grid;
-  grid-template-columns: 1fr max-content max-content max-content;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: 0;
   padding: 0;
   list-style: none;
+
+
+  outline: 2px solid tomato;
+  outline-offset: -5px;
 }
 
 .site-navigation a{
@@ -130,23 +130,26 @@ img {
 }
 
 .site-navigation li:nth-child(1){
-  padding-left: 72px;
+  margin: 0 134px 0 72px;
 }
 
 .site-navigation li:nth-child(2){
-  padding-right: 418px;
+  margin: 0 418px 0 0;
 }
 
 .site-navigation li:nth-child(3){
-  padding-right: 147px;
+  margin: 0 147px 0 0;
 }
 
 
 .site-navigation li:nth-child(4){
-  padding-right: 72px;
+  margin: 0;
 }
 
 .site-navigation li{
+  outline: 2px solid steelblue;
+  outline-offset: -5px;
+  width: 98px;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -217,17 +220,14 @@ img {
 }
 
 .features-item-long{
-
   display: flex;
   flex-wrap: wrap;
   grid-column-start: 1;
   grid-column-end: -1;
-
   width: 100%;
 }
 
 .features-item-back-blue{
-  margin-top: 51px;
   color: var(--basic-white);
   background-color: var(--basic-blue);
 }
@@ -245,6 +245,7 @@ img {
   text-align: center;
 }
 
+/* subsection-features-item */
 .subsection-features-list{
   width: 100%;
   padding: 0;
@@ -279,9 +280,10 @@ img {
   margin-top: 47px;
 }
 
-
+/* отступы здесь после картинки вставленной? */
 .subsection-features-item{
-  padding-top: 160px;
+  margin: 0;
+  padding: 0;
   color: var(--basic-black);
   font-size: 14px;
   font-weight: 400;
@@ -290,7 +292,7 @@ img {
 }
 
 .subsection-features-item h3{
-  margin-bottom: 25px;
+
   font-size: 21px;
   font-weight: 700;
 }
@@ -340,7 +342,14 @@ img {
 }
 
 /* two-page */
+.fieldset{
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
 .specific-hotels{
+  height: 217px;
   color: var(--basic-white);
   font-size: 16px;
   line-height: 21px;
@@ -349,6 +358,7 @@ img {
   background-image: url(../img/background-filter.png);
   background-repeat: no-repeat;
   background-position: center
+
 }
 
 .specific-infra-list,
@@ -368,21 +378,59 @@ img {
 }
 
 .specific-form{
+  padding-top: 27px;
+  padding-bottom: 32px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-/* так не надо */
+
 .specific-infra-list,
-.name-specific-infra-list{
+.name-specific-infra-list,
+.specific-type-list,
+.name-specific-type-list{
   padding: 0;
-  margin-left: 72px;
+  margin: 0;
 }
-
-
 
 .specific-infra-list,
 .specific-type-list{
   list-style: none;
+  outline: 2px solid springgreen;
+  outline-offset: -5px;
+}
+
+.specific-infra{
+  padding-left: 72px;
+  max-width: 253px;
+}
+
+.specific-type{
+
+}
+
+.specific-type{
+  max-width: 273px;
+}
+
+.specific-infra-list li,
+.specific-type-list li{
+  padding-bottom: 25px;
+}
+
+.specific-infra-list li:nth-last-child(1),
+.specific-type-list li:nth-last-child(1){
+  padding: 0;
+}
+
+.name-specific-type-list,
+.name-specific-infra-list{
+padding-bottom: 24px;
+}
+
+
+
+.specific-value{
+
 }
 
 .button-specific{
@@ -551,7 +599,7 @@ img {
   outline-offset: -5px;
 }
 
-.main-footer .container{
+.footer-container{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
