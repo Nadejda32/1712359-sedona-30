@@ -84,6 +84,7 @@ img {
 
 /* Main navigation */
 .main-navigation{
+
   display: grid;
   font-size: 14px;
   line-height: 26px;
@@ -117,7 +118,7 @@ img {
 
 .site-navigation{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr max-content max-content max-content;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -127,6 +128,29 @@ img {
   color: var(--basic-black);
   font-weight: 700;
 }
+
+.site-navigation li:nth-child(1){
+  padding-left: 72px;
+}
+
+.site-navigation li:nth-child(2){
+  padding-right: 418px;
+}
+
+.site-navigation li:nth-child(3){
+  padding-right: 147px;
+}
+
+
+.site-navigation li:nth-child(4){
+  padding-right: 72px;
+}
+
+.site-navigation li{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 
 .site-navigation a:hover,
 .site-navigation a:focus{
@@ -180,6 +204,7 @@ img {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   list-style: none;
+
 }
 
 .features-item{
@@ -202,6 +227,7 @@ img {
 }
 
 .features-item-back-blue{
+  margin-top: 51px;
   color: var(--basic-white);
   background-color: var(--basic-blue);
 }
@@ -209,10 +235,12 @@ img {
 .features-item-back-grey{
   height: 256px;
   background-color: var(--basic-neutral);
+
 }
 
 .features-item h3{
   font-size: 21px;
+  line-height: 21px;
   font-weight: 700;
   text-align: center;
 }
@@ -230,11 +258,30 @@ img {
 }
 
 .features-item-wrapper-text{
+  margin: 0;
+  align-self: center;
   width: 400px;
 }
 
+.features-item-wrapper-text-city h3,
+.features-item-wrapper-text-bridge h3,
+.features-item-back-grey h3{
+  margin-bottom: 25px;
+}
+
+.features-item-wrapper-text-city p,
+.features-item-wrapper-text-bridge p
+.features-item-back-grey p{
+  margin-top: 23px;
+}
+
+.features-item-back-grey h3{
+  margin-top: 47px;
+}
+
+
 .subsection-features-item{
-  height: 330px;
+  padding-top: 160px;
   color: var(--basic-black);
   font-size: 14px;
   font-weight: 400;
@@ -518,6 +565,10 @@ img {
   font-weight: 700;
 }
 
+.footer-contacts p{
+  margin-bottom: 9px;
+}
+
 .footer-contacts a{
   color: var(--basic-black);
 }
@@ -587,4 +638,10 @@ img {
   fill: var(--basic-active-logo-htmlacademy);
 }
 
-
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
