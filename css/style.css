@@ -54,12 +54,14 @@ body{
   font-weight: 400;
   color: var(--basic-black);
   text-transform: uppercase;
-  background-color: var(--basic-white);
+  background-color: var(--basic-background);
 
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+
+
 }
 
 a {
@@ -76,11 +78,12 @@ img {
   height: 100%;
 }
 
-/* main-header */
-.main-header{
-
+p, h2{
+  margin: 0;
+  padding: 0;
 }
 
+/* main-header */
 
 /* Main navigation */
 .main-navigation{
@@ -96,6 +99,8 @@ img {
   width: 1200px;
   margin: 0 auto;
   padding: 0;
+  /* в макете это можно где-то посмотреть? */
+  box-shadow: 0px 0px 10px 5px rgba(0, 1, 1,0.1);
 }
 
 /* logo */
@@ -105,23 +110,23 @@ img {
 }
 
 .main-navigation-wrapper{
+  background-color: var(--basic-white);
   width: 100%;
 }
 
-.main-header-bar{
-  background-color: var(--basic-white);
+.site-navigation{
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0 72px;
+  list-style: none;
 }
 
-.site-navigation{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-
-  outline: 2px solid tomato;
-  outline-offset: -5px;
+.site-navigation li{
+  width: 229px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .site-navigation a{
@@ -130,30 +135,22 @@ img {
 }
 
 .site-navigation li:nth-child(1){
-  margin: 0 134px 0 72px;
+  text-align: left;
+
 }
 
 .site-navigation li:nth-child(2){
-  margin: 0 418px 0 0;
+  text-align: left;
+  margin-right: 138px;
 }
 
 .site-navigation li:nth-child(3){
-  margin: 0 147px 0 0;
+  text-align: right;
 }
-
 
 .site-navigation li:nth-child(4){
-  margin: 0;
+  text-align: right;
 }
-
-.site-navigation li{
-  outline: 2px solid steelblue;
-  outline-offset: -5px;
-  width: 98px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
 
 .site-navigation a:hover,
 .site-navigation a:focus{
@@ -171,16 +168,15 @@ img {
 
 /* main */
 .welcome-sign{
+  display: flex;
+  justify-content: center;
+  align-content: center;
   height: 509px;
   width: 1200px;
   background-color: var(--background-welcom-sign);
   background-image: url(../img/background_photo.jpg);
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.welcome-sign-img{
-  margin: 77px 372px 80px 372px;
 }
 
 /* features */
@@ -193,11 +189,21 @@ img {
   text-align: center;
 }
 
+.introduction-features-bold{
+  margin: 0;
+  padding: 0;
+  padding-top: 42px;
+  padding-bottom: 16px;
+}
+
 .introduction-features-normal{
   font-size: 14px;
   font-weight: 400;
   line-height: 26px;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 51px;
 }
 
 /* features-list */
@@ -233,9 +239,16 @@ img {
 }
 
 .features-item-back-grey{
-  height: 256px;
+  padding-left: 0.1px;
+  padding-right: 0.1px;
+  /* здесь ограничила ширину, но текст все равно вываливается, когда дописываю что-то */
+  width: 400px;
   background-color: var(--basic-neutral);
+}
 
+.features-item-back-grey p{
+  margin-top: 23px;
+  margin-bottom: 54px;
 }
 
 .features-item h3{
@@ -317,12 +330,18 @@ img {
   font-size: 30px;
   line-height: 24px;
   font-weight: 700;
+
+  padding-top: 58px;
+  padding-bottom: 4px;
 }
 
 .modal-info{
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
+
+  padding-top: 30px;
+  padding-bottom: 48px;
 }
 
 .button{
@@ -427,7 +446,10 @@ img {
 padding-bottom: 24px;
 }
 
-
+.result-hotels-sorting{
+  display: flex;
+  align-items: center;
+}
 
 .specific-value{
 
@@ -450,6 +472,7 @@ padding-bottom: 24px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  padding-left: 73px;
 }
 
 .sorting{
@@ -459,7 +482,10 @@ padding-bottom: 24px;
 }
 
 .sorting-list,
-.found-hotels-item{
+.found-hotels-item,
+.found-hotels-list{
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -467,9 +493,43 @@ padding-bottom: 24px;
   border: 1px solid var(--border-hotels);
 }
 
+.found-hotels-item img{
+  width: 135px;
+  height: 90px
+}
+
 .found-hotels-3border{
   border-top: none;
 }
+
+.sorting-list{
+display: flex;
+}
+
+.sorting{
+  margin: 31px 40px 37px 46px;
+}
+
+.sorting-item-price{
+  margin: 31px 32px 37px 0;
+}
+
+.sorting-item-type{
+  margin: 31px 33px 0 0;
+}
+
+.sorting-item-rating{
+  margin: 31px 303px 37px 0;
+}
+
+.found-hotels-item img{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 73px;
+}
+
+
+/* здесь будут отступы для стрелок */
 
 .sorting-item{
   font-size: 12px;
@@ -484,6 +544,7 @@ padding-bottom: 24px;
   opacity: 0.3;
   border-bottom: 1px dotted var(--basic-blue);
 }
+
 
 .name-found-hotels{
   color: var(--basic-black);
@@ -594,23 +655,29 @@ padding-bottom: 24px;
   background-color: var(--basic-white);
   color: var(--basic-black);
   opacity: 0.9;
-
-  outline: 5px solid rgba(255, 0, 0, 0);
-  outline-offset: -5px;
 }
 
 .footer-container{
+  height: 120px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 327px 400px 327px;
+  justify-content: center;
+  align-content: center;
+
+  outline: 5px solid springgreen;
+  outline-offset: -5px;
+
 }
 
 .footer-contacts{
   margin: 0;
-  width: 251px;
-  justify-self: center;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  padding-top: 23px;
+
+  outline: 5px solid violet;
+  outline-offset: -5px;
 }
 
 .footer-contacts p{
@@ -622,13 +689,36 @@ padding-bottom: 24px;
 }
 
 .footer-social{
-  width: 150px;
-  justify-self: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+
   list-style: none;
+
+  outline: 5px solid var(--basic-blue);
+  outline-offset: -5px;
 }
 
 .social-button{
   background-color: var(--basic-blue);
+}
+
+.social-button-tw{
+  margin-right: 6px;
+  padding: 16px 14px 15px 15px;
+}
+
+.social-button-fb{
+  margin-right: 6px;
+
+  padding: 13px 17px 13px 17px;
+}
+
+.social-button-yt{
+  padding: 16px 13px 16px 13px;
 }
 
 .icon-tw{
@@ -652,11 +742,14 @@ padding-bottom: 24px;
 }
 
 .footer-copyright{
-  max-width: 197px;
   margin: 0;
+  padding: 0;
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
+  align-self: center;
+  outline: 5px solid var(--basic-brown);
+  outline-offset: -5px;
 }
 
 .link-htmlacademy{
