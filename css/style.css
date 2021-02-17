@@ -66,6 +66,7 @@ body{
 
 a {
   text-decoration: none;
+
 }
 
 img {
@@ -78,10 +79,12 @@ img {
   height: 100%;
 }
 
-p, h2{
+p, h2, h3{
   margin: 0;
   padding: 0;
 }
+
+
 
 /* main-header */
 
@@ -239,8 +242,6 @@ p, h2{
 }
 
 .features-item-back-grey{
-  padding-left: 0.1px;
-  padding-right: 0.1px;
   /* здесь ограничила ширину, но текст все равно вываливается, когда дописываю что-то */
   width: 400px;
   background-color: var(--basic-neutral);
@@ -260,10 +261,8 @@ p, h2{
 
 /* subsection-features-item */
 .subsection-features-list{
-  width: 100%;
   padding: 0;
   margin: 0;
-  height: 330px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-content: center;
@@ -272,9 +271,10 @@ p, h2{
 }
 
 .features-item-wrapper-text{
+  width: 400px;
   margin: 0;
   align-self: center;
-  width: 400px;
+
 }
 
 .features-item-wrapper-text-city h3,
@@ -295,6 +295,7 @@ p, h2{
 
 /* отступы здесь после картинки вставленной? */
 .subsection-features-item{
+  width: 400px;
   margin: 0;
   padding: 0;
   color: var(--basic-black);
@@ -302,12 +303,19 @@ p, h2{
   font-weight: 400;
   line-height: 21px;
   text-align: center;
+
+
 }
 
 .subsection-features-item h3{
-
+  padding-top: 160px;
+  margin-bottom: 25px;
   font-size: 21px;
   font-weight: 700;
+}
+
+.subsection-features-item p{
+  padding-bottom: 80px;
 }
 
 .three-features-item{
@@ -346,6 +354,8 @@ p, h2{
 
 .button{
   text-align: center;
+  font-family: "PT Sans", Arial, sans-serif;
+
 }
 
 .button-search{
@@ -368,7 +378,6 @@ p, h2{
 }
 
 .specific-hotels{
-  height: 217px;
   color: var(--basic-white);
   font-size: 16px;
   line-height: 21px;
@@ -376,8 +385,8 @@ p, h2{
   background-color: var(--basic-hover-blue);
   background-image: url(../img/background-filter.png);
   background-repeat: no-repeat;
-  background-position: center
-
+  background-position: center;
+  background-size: cover;
 }
 
 .specific-infra-list,
@@ -390,6 +399,12 @@ p, h2{
   font-weight: 400;
 }
 
+.name-specific-value{
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
 .specific-value input{
   color: var(--basic-white);
   background-color: transparent;
@@ -397,10 +412,10 @@ p, h2{
 }
 
 .specific-form{
-  padding-top: 27px;
-  padding-bottom: 32px;
+  padding: 27px 72px 32px 72px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 254px 254px 320px;
+
 }
 
 .specific-infra-list,
@@ -418,17 +433,9 @@ p, h2{
   outline-offset: -5px;
 }
 
-.specific-infra{
-  padding-left: 72px;
-  max-width: 253px;
-}
-
-.specific-type{
-
-}
-
-.specific-type{
-  max-width: 273px;
+.specific-form{
+  outline: 10px solid chartreuse;
+  outline-offset: -5px;
 }
 
 .specific-infra-list li,
@@ -446,6 +453,16 @@ p, h2{
 padding-bottom: 24px;
 }
 
+.specific-value-container{
+
+  width: 320px;
+  outline: 2px solid springgreen;
+  outline-offset: -5px;
+  margin-left: 231px;
+}
+
+
+
 .result-hotels-sorting{
   display: flex;
   align-items: center;
@@ -456,12 +473,14 @@ padding-bottom: 24px;
 }
 
 .button-specific{
-  width: 137px;
-  height: 36px;
+  min-width: 137px;
+  min-height: 36px;
   color: var(--basic-white);
   text-transform: uppercase;
   background-color: transparent;
   border: 2px solid var(--basic-white);
+
+
 }
 
 .result-hotels{
@@ -490,12 +509,19 @@ padding-bottom: 24px;
 }
 
 .found-hotels-item{
+  padding: 30px 71px 30px 71px;
+  display: flex;
+
+
   border: 1px solid var(--border-hotels);
+
 }
+
 
 .found-hotels-item img{
   width: 135px;
-  height: 90px
+  height: 90px;
+  display: block;
 }
 
 .found-hotels-3border{
@@ -507,7 +533,7 @@ display: flex;
 }
 
 .sorting{
-  margin: 31px 40px 37px 46px;
+  margin: 32px 40px 34px 46px;
 }
 
 .sorting-item-price{
@@ -522,11 +548,7 @@ display: flex;
   margin: 31px 303px 37px 0;
 }
 
-.found-hotels-item img{
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 73px;
-}
+
 
 
 /* здесь будут отступы для стрелок */
@@ -553,12 +575,23 @@ display: flex;
   font-weight: 700;
 }
 
+.name-found-hotels-h3{
+  margin-bottom: 6px;
+}
+
+
+
 .type-found-hotels,
 .value-found-hotels,
 .rating-found-hotels{
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+}
+
+.type-found-hotels,
+.value-found-hotels{
+  margin-bottom: 15px;
 }
 
 .button-hotel{
@@ -572,11 +605,19 @@ display: flex;
 }
 
 .button-detailed{
+  padding: 3px 17px 3px 17px;
   background-color: var(--basic-blue);
 }
 
 .button-book{
+  padding: 3px 17px 3px 17px;
   background-color: var(--basic-brown);
+}
+
+.info-hotel-container{
+  display: grid;
+  grid-template-columns: min-content min-content;
+  gap: 6px;
 }
 
 .rating-found-hotels{
@@ -587,6 +628,22 @@ display: flex;
   background-color: var(--basic-background);
   text-align: center;
 }
+
+.info-hotel{
+  width: 780px;
+  margin-left: 20px;
+}
+
+.rating-hotel{
+  width: 110px;
+}
+
+.rating-hotel{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 
 /* состояние инпутов из формы тут будут  и кнопка поиск*/
 
@@ -649,11 +706,22 @@ display: flex;
   opacity: 1;
 }
 
+.modal-img{
+  display: block;
+  width: 1200px;
+  height: 594px;
+}
+
 /* footer */
 .main-footer{
   text-align: center;
   background-color: var(--basic-white);
   color: var(--basic-black);
+
+}
+
+.main-footer-one-page{
+  margin-top: -120px;
   opacity: 0.9;
 }
 
@@ -661,26 +729,23 @@ display: flex;
   height: 120px;
   display: grid;
   grid-template-columns: 327px 400px 327px;
+  grid-template-rows: 120px;
   justify-content: center;
   align-content: center;
-
-  outline: 5px solid springgreen;
-  outline-offset: -5px;
-
 }
 
 .footer-contacts{
+  padding: 0;
   margin: 0;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   padding-top: 23px;
-
-  outline: 5px solid violet;
-  outline-offset: -5px;
 }
 
 .footer-contacts p{
+  margin: 0;
+  padding: 0;
   margin-bottom: 9px;
 }
 
@@ -695,30 +760,21 @@ display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-
   list-style: none;
-
-  outline: 5px solid var(--basic-blue);
-  outline-offset: -5px;
 }
 
 .social-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--basic-blue);
-}
-
-.social-button-tw{
   margin-right: 6px;
-  padding: 16px 14px 15px 15px;
+  width: 46px;
+  height: 48px;
 }
 
-.social-button-fb{
-  margin-right: 6px;
-
-  padding: 13px 17px 13px 17px;
-}
-
-.social-button-yt{
-  padding: 16px 13px 16px 13px;
+.footer-social a:nth-child(3){
+  margin-right: 0;
 }
 
 .icon-tw{
@@ -742,18 +798,23 @@ display: flex;
 }
 
 .footer-copyright{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
-  align-self: center;
-  outline: 5px solid var(--basic-brown);
-  outline-offset: -5px;
 }
 
 .link-htmlacademy{
   color: var(--basic-black);
+  align-self: center;
+}
+
+.copyright{
+  margin-right: 6px;
 }
 
 /* condition-footer */
@@ -778,6 +839,9 @@ display: flex;
 .link-htmlacademy path:active{
   fill: var(--basic-active-logo-htmlacademy);
 }
+
+
+
 
 .visually-hidden {
   position: absolute;
