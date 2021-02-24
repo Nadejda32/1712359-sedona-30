@@ -1,5 +1,5 @@
 /* fonts */
-@font-face{
+@font-face {
   font-family: "PT Sans";
   src: url(../fonts/ptsans.woff2) format("woff2"),
   url(../fonts/ptsans.woff) format("woff");
@@ -7,7 +7,7 @@
   font-style: normal;
 }
 
-@font-face{
+@font-face {
   font-family: "PT Sans";
   src:url(../fonts/ptsans-bold.woff2) format("woff2"),
   url(../fonts/ptsans-bold.woff) format("woff");
@@ -16,7 +16,7 @@
 }
 
 /* variables */
-:root{
+:root {
   --basic-black: #000000;
   --basic-white: #FFFFFF;
   --basic-logo-blue: #81B3D3;
@@ -41,10 +41,11 @@
   --border-hotels: #E5E5E5;
   --color-active-white:rgba(255, 255, 255, 0.3);
   --color-active-black: rgba(0,0,0,0.3);
+  --color-box-shadow: rgba(0, 1, 1, 0.2);
 }
 
 /* global */
-body{
+body {
   min-width: 960px;
   margin: 0;
   padding: 0;
@@ -60,13 +61,10 @@ body{
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
-
-
 }
 
 a {
   text-decoration: none;
-
 }
 
 img {
@@ -75,21 +73,14 @@ img {
 }
 
 /* Grid */
-.page{
+.page {
   height: 100%;
 }
-
-p, h2, h3{
-  margin: 0;
-  padding: 0;
-}
-
-
 
 /* main-header */
 
 /* Main navigation */
-.main-navigation{
+.main-navigation {
   display: grid;
   font-size: 14px;
   line-height: 26px;
@@ -98,26 +89,25 @@ p, h2, h3{
 }
 
 /* container */
-.container{
+.container {
   width: 1200px;
   margin: 0 auto;
   padding: 0;
-  /* в макете это можно где-то посмотреть? */
-  box-shadow: 0px 0px 10px 5px rgba(0, 1, 1,0.1);
+  box-shadow: 0px 5px 15px var(--color-box-shadow);
 }
 
 /* logo */
-.main-header-logo{
+.main-header-logo {
   order: 1;
   justify-self: center;
 }
 
-.main-navigation-wrapper{
+.main-navigation-wrapper {
   background-color: var(--basic-white);
   width: 100%;
 }
 
-.site-navigation{
+.site-navigation {
   display: flex;
   box-sizing: border-box;
   flex-wrap: wrap;
@@ -126,51 +116,51 @@ p, h2, h3{
   list-style: none;
 }
 
-.site-navigation li{
+.site-navigation li {
   width: 229px;
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
-.site-navigation a{
+.site-navigation a {
   color: var(--basic-black);
   font-weight: 700;
 }
 
-.site-navigation li:nth-child(1){
+.site-navigation li:nth-child(1) {
   text-align: left;
 
 }
 
-.site-navigation li:nth-child(2){
+.site-navigation li:nth-child(2) {
   text-align: left;
   margin-right: 138px;
 }
 
-.site-navigation li:nth-child(3){
+.site-navigation li:nth-child(3) {
   text-align: right;
 }
 
-.site-navigation li:nth-child(4){
+.site-navigation li:nth-child(4) {
   text-align: right;
 }
 
 .site-navigation a:hover,
-.site-navigation a:focus{
+.site-navigation a:focus {
   color: var(--basic-blue);
 }
 
-.site-navigation a:active{
+.site-navigation a:active {
   color: var(--basic-black);
   opacity: 0.3;
 }
 
-.site-navigation .active{
+.site-navigation .active {
   color: var(--basic-brown);
 }
 
 /* main */
-.welcome-sign{
+.welcome-sign {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -183,7 +173,7 @@ p, h2, h3{
 }
 
 /* features */
-.introduction-features{
+.introduction-features {
   color: var(--basic-black);
   background-color: var(--basic-white);
   font-size: 21px;
@@ -192,14 +182,14 @@ p, h2, h3{
   text-align: center;
 }
 
-.introduction-features-bold{
+.introduction-features-bold {
   margin: 0;
   padding: 0;
   padding-top: 42px;
   padding-bottom: 16px;
 }
 
-.introduction-features-normal{
+.introduction-features-normal {
   font-size: 14px;
   font-weight: 400;
   line-height: 26px;
@@ -210,16 +200,15 @@ p, h2, h3{
 }
 
 /* features-list */
-.features-list{
+.features-list {
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   list-style: none;
-
 }
 
-.features-item{
+.features-item {
   color: var(--basic-black);
   font-size: 14px;
   line-height: 21px;
@@ -228,7 +217,7 @@ p, h2, h3{
   text-align: center;
 }
 
-.features-item-long{
+.features-item-long {
   display: flex;
   flex-wrap: wrap;
   grid-column-start: 1;
@@ -236,23 +225,27 @@ p, h2, h3{
   width: 100%;
 }
 
-.features-item-back-blue{
+.features-item-back-blue {
   color: var(--basic-white);
   background-color: var(--basic-blue);
 }
 
-.features-item-back-grey{
+.features-item-back-grey {
   /* здесь ограничила ширину, но текст все равно вываливается, когда дописываю что-то */
   width: 400px;
   background-color: var(--basic-neutral);
 }
 
-.features-item-back-grey p{
+.features-item-back-grey p {
+  margin: 0;
+  padding: 0;
   margin-top: 23px;
   margin-bottom: 54px;
 }
 
-.features-item h3{
+.features-item h3 {
+  margin: 0;
+  padding: 0;
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
@@ -260,7 +253,7 @@ p, h2, h3{
 }
 
 /* subsection-features-item */
-.subsection-features-list{
+.subsection-features-list {
   padding: 0;
   margin: 0;
   display: grid;
@@ -270,31 +263,36 @@ p, h2, h3{
   background-color: var(--basic-white);
 }
 
-.features-item-wrapper-text{
+.features-item-wrapper-text {
   width: 400px;
   margin: 0;
   align-self: center;
-
 }
 
 .features-item-wrapper-text-city h3,
 .features-item-wrapper-text-bridge h3,
-.features-item-back-grey h3{
+.features-item-back-grey h3 {
+  margin: 0;
+  padding: 0;
   margin-bottom: 25px;
 }
 
 .features-item-wrapper-text-city p,
 .features-item-wrapper-text-bridge p
-.features-item-back-grey p{
+.features-item-back-grey p {
+  margin: 0;
+  padding: 0;
   margin-top: 23px;
 }
 
-.features-item-back-grey h3{
+.features-item-back-grey h3 {
+  margin: 0;
+  padding: 0;
   margin-top: 47px;
 }
 
 /* отступы здесь после картинки вставленной? */
-.subsection-features-item{
+.subsection-features-item {
   width: 400px;
   margin: 0;
   padding: 0;
@@ -303,22 +301,24 @@ p, h2, h3{
   font-weight: 400;
   line-height: 21px;
   text-align: center;
-
-
 }
 
-.subsection-features-item h3{
+.subsection-features-item h3 {
+  margin: 0;
+  padding: 0;
   padding-top: 160px;
   margin-bottom: 25px;
   font-size: 21px;
   font-weight: 700;
 }
 
-.subsection-features-item p{
+.subsection-features-item p {
+  margin: 0;
+  padding: 0;
   padding-bottom: 80px;
 }
 
-.three-features-item{
+.three-features-item {
   color: var(--basic-black);
   font-size: 14px;
   line-height: 21px;
@@ -329,36 +329,34 @@ p, h2, h3{
 
 /* modal */
 
-.modal{
+.modal {
   background-color: var(--basic-white);
   text-align: center;
 }
 
-.modal h2{
+.modal h2 {
+  margin: 0;
+  padding: 0;
   font-size: 30px;
   line-height: 24px;
   font-weight: 700;
-
   padding-top: 58px;
   padding-bottom: 4px;
 }
 
-.modal-info{
+.modal-info {
+  margin: 0;
+  padding: 0;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
-
   padding-top: 30px;
   padding-bottom: 48px;
 }
 
-.button{
-  text-align: center;
-  font-family: "PT Sans", Arial, sans-serif;
 
-}
 
-.button-search{
+.button-search {
   width: 568px;
   height: 86px;
   color: var(--basic-white);
@@ -368,16 +366,19 @@ p, h2, h3{
   background-color: var(--basic-brown);
   border: none;
   text-transform: uppercase;
+
+  text-align: center;
+  font-family: "PT Sans", Arial, sans-serif;
 }
 
 /* two-page */
-.fieldset{
+.fieldset {
   margin: 0;
   padding: 0;
   border: none;
 }
 
-.specific-hotels{
+.specific-hotels {
   color: var(--basic-white);
   font-size: 16px;
   line-height: 21px;
@@ -393,25 +394,25 @@ p, h2, h3{
 .specific-type-list,
 .specific-value-min,
 .specific-value-max,
-.specific-value{
+.specific-value {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
 }
 
-.name-specific-value{
+.name-specific-value {
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
 }
 
-.specific-value input{
+.specific-value input {
   color: var(--basic-white);
   background-color: transparent;
   border: 2px solid var(--basic-white);
 }
 
-.specific-form{
+.specific-form {
   padding: 27px 72px 32px 72px;
   display: grid;
   grid-template-columns: 254px 254px 320px;
@@ -421,80 +422,83 @@ p, h2, h3{
 .specific-infra-list,
 .name-specific-infra-list,
 .specific-type-list,
-.name-specific-type-list{
+.name-specific-type-list {
   padding: 0;
   margin: 0;
 }
 
 .specific-infra-list,
-.specific-type-list{
+.specific-type-list {
   list-style: none;
   outline: 2px solid springgreen;
   outline-offset: -5px;
 }
 
-.specific-form{
+.specific-form {
   outline: 10px solid chartreuse;
   outline-offset: -5px;
 }
 
 .specific-infra-list li,
-.specific-type-list li{
+.specific-type-list li {
   padding-bottom: 25px;
 }
 
 .specific-infra-list li:nth-last-child(1),
-.specific-type-list li:nth-last-child(1){
+.specific-type-list li:nth-last-child(1) {
   padding: 0;
 }
 
 .name-specific-type-list,
-.name-specific-infra-list{
+.name-specific-infra-list {
 padding-bottom: 24px;
 }
 
-.specific-value-container{
-
+.specific-value-container {
   width: 320px;
   outline: 2px solid springgreen;
   outline-offset: -5px;
   margin-left: 231px;
 }
 
-
-
-.result-hotels-sorting{
+.result-hotels-sorting {
   display: flex;
   align-items: center;
 }
 
-.specific-value{
+.specific-value {
 
 }
 
-.button-specific{
+.button-specific {
   min-width: 137px;
   min-height: 36px;
   color: var(--basic-white);
   text-transform: uppercase;
   background-color: transparent;
   border: 2px solid var(--basic-white);
+  border-radius: 2px;
 
-
+  text-align: center;
+  font-family: "PT Sans", Arial, sans-serif;
 }
 
-.result-hotels{
+.result-hotels {
   background-color: var(--basic-white);
 }
 
-.found{
+.found {
+  margin: 0;
+  padding: 0;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   padding-left: 73px;
 }
 
-.sorting{
+.sorting {
+  margin: 0;
+  padding: 0;
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
@@ -502,58 +506,53 @@ padding-bottom: 24px;
 
 .sorting-list,
 .found-hotels-item,
-.found-hotels-list{
+.found-hotels-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.found-hotels-item{
+.found-hotels-item {
   padding: 30px 71px 30px 71px;
   display: flex;
+  border-top: 1px solid var(--border-hotels);
+}
 
-
-  border: 1px solid var(--border-hotels);
-
+.found-hotels-list li:last-child {
+  border-bottom: 1px solid var(--border-hotels);
 }
 
 
-.found-hotels-item img{
+.found-hotels-item img {
   width: 135px;
   height: 90px;
   display: block;
 }
 
-.found-hotels-3border{
-  border-top: none;
-}
-
-.sorting-list{
+.sorting-list {
 display: flex;
 }
 
-.sorting{
+.sorting {
   margin: 32px 40px 34px 46px;
 }
 
-.sorting-item-price{
+.sorting-item-price {
   margin: 31px 32px 37px 0;
 }
 
-.sorting-item-type{
+.sorting-item-type {
   margin: 31px 33px 0 0;
 }
 
-.sorting-item-rating{
+.sorting-item-rating {
   margin: 31px 303px 37px 0;
 }
 
 
-
-
 /* здесь будут отступы для стрелок */
 
-.sorting-item{
+.sorting-item {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
@@ -561,40 +560,42 @@ display: flex;
 
 .sorting-item-type,
 .sorting-item-rating,
-.sorting-item-price{
+.sorting-item-price {
   color: var(--basic-black);
   opacity: 0.3;
   border-bottom: 1px dotted var(--basic-blue);
 }
 
 
-.name-found-hotels{
+.name-found-hotels {
   color: var(--basic-black);
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
 }
 
-.name-found-hotels-h3{
+.name-found-hotels-h3 {
+  margin: 0;
+  padding: 0;
   margin-bottom: 6px;
 }
 
-
-
 .type-found-hotels,
 .value-found-hotels,
-.rating-found-hotels{
+.rating-found-hotels {
+  margin: 0;
+  padding: 0;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
 }
 
 .type-found-hotels,
-.value-found-hotels{
+.value-found-hotels {
   margin-bottom: 15px;
 }
 
-.button-hotel{
+.button-hotel {
   color: var(--basic-white);
   font-size: 14px;
   line-height: 21px;
@@ -602,25 +603,36 @@ display: flex;
   border: none;
   text-transform: uppercase;
   text-align: center;
+
+  text-align: center;
+  font-family: "PT Sans", Arial, sans-serif;
 }
 
-.button-detailed{
+.button-detailed {
   padding: 3px 17px 3px 17px;
   background-color: var(--basic-blue);
+
+  text-align: center;
+  font-family: "PT Sans", Arial, sans-serif;
 }
 
-.button-book{
+.button-book {
   padding: 3px 17px 3px 17px;
   background-color: var(--basic-brown);
+
+  text-align: center;
+  font-family: "PT Sans", Arial, sans-serif;
 }
 
-.info-hotel-container{
+.info-hotel-container {
   display: grid;
   grid-template-columns: min-content min-content;
   gap: 6px;
 }
 
-.rating-found-hotels{
+.rating-found-hotels {
+  margin: 0;
+  padding: 0;
   padding-top: 3px;
   width: 110px;
   height: 27px;
@@ -629,16 +641,16 @@ display: flex;
   text-align: center;
 }
 
-.info-hotel{
+.info-hotel {
   width: 780px;
   margin-left: 20px;
 }
 
-.rating-hotel{
+.rating-hotel {
   width: 110px;
 }
 
-.rating-hotel{
+.rating-hotel {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -648,84 +660,89 @@ display: flex;
 /* состояние инпутов из формы тут будут  и кнопка поиск*/
 
 .button-search:hover,
-.button-search:focus{
+.button-search:focus {
   background-color: var(--basic-hover-brown);
 }
 
-.button-search:active{
+.button-search:active {
   background-color: var(--basic-active-brown);
   color: var(--color-active-white);
 }
 
+.button-specific:hover {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
 .sorting-list a:hover,
-.sorting-list a:focus{
+.sorting-list a:focus {
   color: var(--basic-blue);
   opacity: 1;
   border-bottom: 1px dotted var(--basic-blue);
 }
 
-.sorting-list a:active{
+.sorting-list a:active {
   border: none;
   color: var(--basic-black);
   opacity: 1;
 }
 
 .name-found-hotels:hover,
-.name-found-hotels:focus{
+.name-found-hotels:focus {
   color: var(--basic-blue);
 }
 
-.name-found-hotels:active{
+.name-found-hotels:active {
   color: var(--color-active-black)
 }
 
 .button-detailed:hover,
-.button-detailed:focus{
+.button-detailed:focus {
   background-color: var(--basic-hover-blue);
 }
 
-.button-detailed:active{
+.button-detailed:active {
   background-color: var(--basic-active-blue);
   color: var(--color-active-white);
 
 }
 
 .button-book:hover,
-.button-book:focus{
+.button-book:focus {
   background-color: var(--basic-hover-brown);
 }
 
-.button-book:active{
+.button-book:active {
   background-color: var(--basic-active-brown);
   color: var(--color-active-white);
 }
 
-.sorting-list .active_sorting{
+.sorting-list .active_sorting {
   color: var(--basic-blue);
   border: none;
   opacity: 1;
 }
 
-.modal-img{
+.modal-img {
   display: block;
   width: 1200px;
   height: 594px;
 }
 
 /* footer */
-.main-footer{
+.main-footer {
   text-align: center;
   background-color: var(--basic-white);
   color: var(--basic-black);
 
 }
 
-.main-footer-one-page{
+.main-footer-one-page {
   margin-top: -120px;
   opacity: 0.9;
 }
 
-.footer-container{
+.footer-container {
   height: 120px;
   display: grid;
   grid-template-columns: 327px 400px 327px;
@@ -734,7 +751,7 @@ display: flex;
   align-content: center;
 }
 
-.footer-contacts{
+.footer-contacts {
   padding: 0;
   margin: 0;
   font-size: 21px;
@@ -743,17 +760,17 @@ display: flex;
   padding-top: 23px;
 }
 
-.footer-contacts p{
+.footer-contacts p {
   margin: 0;
   padding: 0;
   margin-bottom: 9px;
 }
 
-.footer-contacts a{
+.footer-contacts a {
   color: var(--basic-black);
 }
 
-.footer-social{
+.footer-social {
   margin: 0;
   padding: 0;
   display: flex;
@@ -763,7 +780,7 @@ display: flex;
   list-style: none;
 }
 
-.social-button{
+.social-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -773,31 +790,31 @@ display: flex;
   height: 48px;
 }
 
-.footer-social a:nth-child(3){
+.footer-social a:nth-child(3) {
   margin-right: 0;
 }
 
-.icon-tw{
+.icon-tw {
   width: 17px;
   height: 15px;
 }
 
-.icon-fb{
+.icon-fb {
   width: 12px;
   height: 22px;
 }
 
-.icon-yt{
+.icon-yt {
   width: 20px;
   height: 16px;
 }
 
-.icon-htmlacademy{
+.icon-htmlacademy {
   width: 115px;
   height: 41px;
 }
 
-.footer-copyright{
+.footer-copyright {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -808,40 +825,37 @@ display: flex;
   font-weight: 400;
 }
 
-.link-htmlacademy{
+.link-htmlacademy {
   color: var(--basic-black);
   align-self: center;
 }
 
-.copyright{
+.copyright {
   margin-right: 6px;
 }
 
 /* condition-footer */
 .social-button:hover,
-.social-button:focus{
+.social-button:focus {
   background-color: var(--basic-hover-blue);
 }
 
-.social-button:active{
+.social-button:active {
   background-color: var(--basic-active-blue);
 }
 
-.social-button:active path{
+.social-button:active path {
   fill: var(--color-active-white);
 }
 
 .link-htmlacademy path:hover,
-.link-htmlacademy path:focus{
+.link-htmlacademy path:focus {
   fill: var(--basic-hover-blue);
 }
 
-.link-htmlacademy path:active{
+.link-htmlacademy path:active {
   fill: var(--basic-active-logo-htmlacademy);
 }
-
-
-
 
 .visually-hidden {
   position: absolute;
