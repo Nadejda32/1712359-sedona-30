@@ -393,6 +393,7 @@ img {
 .modal h2 {
   margin: 0;
   padding: 0;
+  margin-left: -12px;
   font-size: 30px;
   line-height: 24px;
   font-weight: 700;
@@ -406,7 +407,7 @@ img {
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
-  padding-top: 30px;
+  padding-top: 28px;
   padding-bottom: 44px;
 }
 
@@ -427,7 +428,6 @@ img {
 
 .form-search-hotel input{
   font-weight: 700;
-  border: none;
 }
 
 .form-search-hotel {
@@ -435,6 +435,7 @@ img {
   position: absolute;
   top: 291px;
   left: 316px;
+  z-index: 1;
   width: 568px;
   padding: 55px;
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
@@ -461,8 +462,9 @@ img {
 }
 
 .container-date .form-search-hotel-label:not(:nth-last-child(0)) {
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 }
+
 
 .input-date::placeholder,
 .input-residents::placeholder {
@@ -476,7 +478,7 @@ img {
 
 .input-date {
   box-sizing: border-box;
-
+  text-transform: uppercase;
   width: 346px;
   height: 38px;
   padding: 6px 12px 6px 12px;
@@ -490,7 +492,8 @@ img {
 }
 
 .input-date-finish {
-  margin-left: 9px;
+  margin-left: 17px;
+  margin-bottom: 3px;
 }
 
 .input-adults {
@@ -518,7 +521,7 @@ img {
   box-sizing: border-box;
   display: block;
   padding: 16px;
-  margin-top: 70px;
+  margin-top: 55px;
   min-width: 458px;
   font-size: 21px;
   line-height: 26px;
@@ -732,6 +735,16 @@ img {
 
 .check-input:checked:disabled + .check-box {
   background-image: url(../img/checkbox/checkbox-on-disabled.svg);
+}
+
+.check:focus-within {
+  outline: 1px dotted var(--basic-white);
+  outline-offset: 5px;
+}
+
+.check:hover {
+  font-size: 14.5px;
+  line-height: 15px;
 }
 
 .specific-infra-list,
@@ -1177,6 +1190,16 @@ padding-bottom: 24px;
   opacity: 1;
 }
 
+.modal-iframe {
+  display: none;
+  position: absolute;
+  top: 290px;
+  left: 0;
+  border: none;
+  width: 1200px;
+  height: 594px;
+}
+
 .modal-img {
   display: block;
   width: 1200px;
@@ -1188,14 +1211,7 @@ padding-bottom: 24px;
   text-align: center;
   background-color: var(--basic-white);
   color: var(--basic-black);
-
 }
-/*
-.main-footer-one-page {
-  margin-top: -120px;
-  opacity: 0.9;
-} */
-
 
 .container{
   position: relative;
@@ -1203,14 +1219,11 @@ padding-bottom: 24px;
 
 .main-footer-one-page{
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   left: 0;
   right: 0;
-
   background-color: var(--color-index-footer);
 }
-
-
 
 .footer-container {
   height: 120px;
